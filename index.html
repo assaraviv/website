@@ -90,6 +90,7 @@ nav {
   color: var(--muted); text-decoration: none; transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--ink); }
+.nav-name { opacity: 1; }
 
 .section { padding: 4rem 3rem; border-bottom: 1px solid var(--line); }
 .section-header {
@@ -114,9 +115,10 @@ nav {
 .card-thumb { width: 100%; aspect-ratio: 16/9; overflow: hidden; position: relative; }
 .card-thumb img {
   width: 100%; height: 100%; object-fit: cover; display: block;
-  filter: grayscale(35%); transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s ease;
+  filter: contrast(1.08) brightness(1.04) saturate(1.12);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.card:hover .card-thumb img { transform: scale(1.045); filter: grayscale(0%); }
+.card:hover .card-thumb img { transform: scale(1.045); }
 .card-thumb .gif-preview {
   position: absolute; inset: 0;
   width: 100%; height: 100%; object-fit: cover;
@@ -277,7 +279,6 @@ nav {
 </head>
 <body>
 
-<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">Assa Raviv Composer &amp; Sound Designer</h1>
 <nav>
   <a class="nav-name" href="#">Assa Raviv</a>
   <ul class="nav-links">
@@ -287,6 +288,8 @@ nav {
     <li><a href="mailto:assa@assaraviv.com">Contact</a></li>
   </ul>
 </nav>
+
+<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">Assa Raviv Composer &amp; Sound Designer</h1>
 
 <!-- BRAND WORK -->
 <section class="section" id="brand">
@@ -328,7 +331,7 @@ nav {
 
     <a class="card" href="https://vimeo.com/1093159019" target="_blank">
       <div class="card-thumb">
-        <img src="https://i.vimeocdn.com/video/2026415890-5b5960b4d6052c2f371fa6b080cf8c0a95f5bd3268018ba49299cabfac916998-d_1280x720?f=webp&region=us" alt="Google Chrome music by Assa Raviv">
+        <img src="https://i.vimeocdn.com/video/2026415890-5b5960b4d6052c2f371fa6b080cf8c0a95f5bd3268018ba49299cabfac916998-d_1920x1080?f=webp&region=us" alt="Google Chrome music by Assa Raviv">
         <img class="gif-preview" data-src="google-preview.gif" alt="" aria-hidden="true">
         <div class="card-overlay">
           <div class="card-client">Google</div>
@@ -338,7 +341,7 @@ nav {
 
     <a class="card" href="https://vimeo.com/1162765877" target="_blank">
       <div class="card-thumb">
-        <img src="https://i.vimeocdn.com/video/2118819830-3195d7e344ac6c4dc6cb1289541f79f2fd226a44e87a27fbb3a0e9f2b391cf5f-d_1280x720?f=webp&region=us" alt="Apple England Rugby music by Assa Raviv">
+        <img src="https://i.vimeocdn.com/video/2118819830-3195d7e344ac6c4dc6cb1289541f79f2fd226a44e87a27fbb3a0e9f2b391cf5f-d_1920x1080?f=webp&region=us" alt="Apple England Rugby music by Assa Raviv">
         <img class="gif-preview" data-src="apple-preview.gif" alt="" aria-hidden="true">
         <div class="card-overlay">
           <div class="card-client">Apple</div>
@@ -348,7 +351,7 @@ nav {
 
     <a class="card" href="https://vimeo.com/964407888/71f6aa6250" target="_blank">
       <div class="card-thumb">
-        <img src="https://i.vimeocdn.com/video/1876982097-67444b69ebed86ce7ddc7e2b496fcd3174acce4329b042f41dbcc4fe8622063b-d_1280x720?f=webp&region=us" alt="The Sound of Leffe sonic identity music by Assa Raviv">
+        <img src="https://i.vimeocdn.com/video/1876982097-67444b69ebed86ce7ddc7e2b496fcd3174acce4329b042f41dbcc4fe8622063b-d_1920x1080?f=webp&region=us" alt="The Sound of Leffe sonic identity music by Assa Raviv">
         <img class="gif-preview" data-src="leffe-preview.gif" alt="" aria-hidden="true">
         <div class="card-overlay">
           <div class="card-client">Leffe</div>
@@ -358,7 +361,7 @@ nav {
 
     <a class="card" href="https://vimeo.com/1019862747" target="_blank">
       <div class="card-thumb">
-        <img src="https://i.vimeocdn.com/video/1964072507-64c60f6c9e70780e18895c14ffd8f590de31bf565e73b0a0174d352d4fdb7f82-d_1280x720?f=webp&region=us" alt="BMW The Perfect Drive music by Assa Raviv">
+        <img src="https://i.vimeocdn.com/video/1964072507-64c60f6c9e70780e18895c14ffd8f590de31bf565e73b0a0174d352d4fdb7f82-d_1920x1080?f=webp&region=us" alt="BMW The Perfect Drive music by Assa Raviv">
         <img class="gif-preview" data-src="bmw-preview.gif" alt="" aria-hidden="true">
         <div class="card-overlay">
           <div class="card-client">BMW</div>
@@ -410,7 +413,7 @@ nav {
 
     <a class="card" href="https://vimeo.com/1019556729/132d77e43e" target="_blank" data-vimeo="1019556729" data-vimeo-hash="132d77e43e">
       <div class="card-thumb">
-        <img src="https://i.vimeocdn.com/video/1937957805-03c76982c90a7dc2502adf3e3c88136a18808520d4d2fb70fb07163bfd8121ec-d_1280x720?f=webp&region=us" alt="The Sound of AEG">
+        <img src="https://i.vimeocdn.com/video/1937957805-03c76982c90a7dc2502adf3e3c88136a18808520d4d2fb70fb07163bfd8121ec-d_1920x1080?f=webp&region=us" alt="The Sound of AEG">
         <img class="gif-preview" data-src="aeg-preview.gif" alt="" aria-hidden="true">
         <div class="card-overlay">
           <div class="card-client">AEG</div>
@@ -430,7 +433,7 @@ nav {
 
     <a class="card" href="https://vimeo.com/1103343371" target="_blank" data-vimeo="1103343371">
       <div class="card-thumb">
-        <img src="https://i.vimeocdn.com/video/2039335724-32387353619475a9ff97c6b09bef0829ee260a4a9856d9fa2edcc0220c6ffc07-d_1280x720?f=webp&region=us" alt="Fiji Water">
+        <img src="https://i.vimeocdn.com/video/2039335724-32387353619475a9ff97c6b09bef0829ee260a4a9856d9fa2edcc0220c6ffc07-d_1920x1080?f=webp&region=us" alt="Fiji Water">
         <img class="gif-preview" data-src="fiji-water-preview.gif" alt="" aria-hidden="true">
         <div class="card-overlay">
           <div class="card-client">Fiji Water</div>
@@ -440,7 +443,7 @@ nav {
 
     <a class="card" href="https://vimeo.com/742460619" target="_blank" data-vimeo="742460619">
       <div class="card-thumb">
-        <img src="https://i.vimeocdn.com/video/1493836364-d64566ad0f8720deceec94d21222ba70fc353c678ec946055a3850b4e8b5fd5e-d_1280x720?f=webp&region=us" alt="Amazon Protect Connect">
+        <img src="https://i.vimeocdn.com/video/1493836364-d64566ad0f8720deceec94d21222ba70fc353c678ec946055a3850b4e8b5fd5e-d_1920x1080?f=webp&region=us" alt="Amazon Protect Connect">
         <img class="gif-preview" data-src="amazon-preview.gif" alt="" aria-hidden="true">
         <div class="card-overlay">
           <div class="card-client">Amazon</div>
@@ -450,7 +453,7 @@ nav {
 
     <a class="card" href="https://vimeo.com/320683095" target="_blank" data-vimeo="320683095">
       <div class="card-thumb">
-        <img src="https://i.vimeocdn.com/video/763162232-adda8c749f21893f5d8ac591c401c8b94bce13a86d4c2a886b6975897cd98f88-d_1280x720?&r=pad&region=us" loading="lazy" alt="Nike Big Air Safety Training music by Assa Raviv">
+        <img src="https://i.vimeocdn.com/video/763162232-adda8c749f21893f5d8ac591c401c8b94bce13a86d4c2a886b6975897cd98f88-d_1920x1080?&r=pad&region=us" loading="lazy" alt="Nike Big Air Safety Training music by Assa Raviv">
         <img class="gif-preview" data-src="nike-preview.gif" alt="" aria-hidden="true">
         <div class="card-overlay">
           <div class="card-client">Nike</div>
@@ -460,7 +463,7 @@ nav {
 
     <a class="card" href="https://vimeo.com/1071313524" target="_blank" data-vimeo="1071313524">
       <div class="card-thumb">
-        <img src="https://i.vimeocdn.com/video/2000014172-548efe0768cd0e7a01674f8ed3cca1a6e790019187b480f5edf8db23dc8edcd4-d_1280x720?&r=pad&region=us" loading="lazy" alt="Kia The Next Movement music by Assa Raviv">
+        <img src="https://i.vimeocdn.com/video/2000014172-548efe0768cd0e7a01674f8ed3cca1a6e790019187b480f5edf8db23dc8edcd4-d_1920x1080?&r=pad&region=us" loading="lazy" alt="Kia The Next Movement music by Assa Raviv">
         <img class="gif-preview" data-src="kia-preview.gif" alt="" aria-hidden="true">
         <div class="card-overlay">
           <div class="card-client">Kia</div>
@@ -470,7 +473,7 @@ nav {
 
     <a class="card" href="https://vimeo.com/503731147" target="_blank" data-vimeo="503731147">
       <div class="card-thumb">
-        <img src="https://i.vimeocdn.com/video/1964295546-d25df9a10054dff0fc72383c5c0f5bfcd44af882582a077992005bb83eb370fd-d_1280x720?&r=pad&region=us" loading="lazy" alt="Sisley Izia La Nuit music by Assa Raviv">
+        <img src="https://i.vimeocdn.com/video/1964295546-d25df9a10054dff0fc72383c5c0f5bfcd44af882582a077992005bb83eb370fd-d_1920x1080?&r=pad&region=us" loading="lazy" alt="Sisley Izia La Nuit music by Assa Raviv">
         <img class="gif-preview" data-src="sisley-preview.gif" alt="" aria-hidden="true">
         <div class="card-overlay">
           <div class="card-client">Sisley</div>
