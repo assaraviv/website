@@ -71,7 +71,7 @@
   --paper: #f4f1eb;
   --warm: #c8a96e;
   --warm-text: #7a5a24;
-  --muted: #7a7268;
+  --muted: #756d64;
   --line: rgba(15,13,11,0.11);
 }
 html { scroll-behavior: smooth; }
@@ -170,19 +170,6 @@ nav {
 }
 .card-row { display: flex; justify-content: center; align-items: center; gap: 0.75rem; }
 .card-type { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: none; color: rgba(244,241,235,0.8); font-weight: 300; }
-.card-award { font-size: 0.48rem; letter-spacing: 0.08em; color: var(--warm); }
-
-/* AWARDS */
-.awards-section { background: var(--ink); padding: 4rem 3rem; }
-.awards-header {
-  margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(244,241,235,0.1);
-}
-.awards-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--paper); }
-.awards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(244,241,235,0.08); margin-top: 2rem; }
-.award-cell { background: var(--ink); padding: 1.5rem; }
-.award-medal { font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--warm); margin-bottom: 0.75rem; }
-.award-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; color: var(--paper); line-height: 1.4; margin-bottom: 0.4rem; }
-.award-org { font-size: 0.5rem; letter-spacing: 0.08em; color: rgba(244,241,235,0.32); }
 
 /* ABOUT */
 .about-section {
@@ -274,7 +261,7 @@ h2.about-label { font-weight: 300; }
 
 
 /* MAX WIDTH CONTAINER */
-nav, .section, .awards-section, .about-section, footer {
+nav, .section, .about-section, footer {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -350,6 +337,7 @@ nav {
 
 <h1 class="visually-hidden">Assa Raviv — Composer for Advertising, Film &amp; Television</h1>
 
+<main>
 <!-- BRAND WORK -->
 <section class="section" id="brand">
   <div class="section-header">
@@ -517,7 +505,7 @@ nav {
       </div>
     </a>
 
-    <a class="card" aria-label="Tide – Laundry Night, play video" href="https://vimeo.com/358977058" target="_blank" data-vimeo="358977058" data-preview="tide-preview.mp4">
+    <a class="card" aria-label="Tide – Laundry Night, play video, Clio Awards Silver" href="https://vimeo.com/358977058" target="_blank" data-vimeo="358977058" data-preview="tide-preview.mp4">
       <div class="card-thumb">
         <img src="https://i.vimeocdn.com/video/812747312-5cb3011af194cf53d77e7da981e3e40f1c71f46424cc136a5512a3f95f860921-d_1920x1080?f=webp&region=us" loading="lazy" decoding="async" alt="">
         <div class="card-overlay">
@@ -528,7 +516,7 @@ nav {
       </div>
     </a>
 
-    <a class="card" aria-label="Resy – Right This Way, play video" href="https://vimeo.com/1078904539" target="_blank" data-vimeo="1078904539" data-preview="resy-preview.mp4">
+    <a class="card" aria-label="Resy – Right This Way, play video, Clio Awards Bronze" href="https://vimeo.com/1078904539" target="_blank" data-vimeo="1078904539" data-preview="resy-preview.mp4">
       <div class="card-thumb">
         <img src="https://i.vimeocdn.com/video/2009227795-4fcb045cd077044b32ffd78aea4bb3620312d09ecbd99514cd5cd68d6d6c597d-d_1920x1080?f=webp&region=us" loading="lazy" decoding="async" alt="">
         <div class="card-overlay">
@@ -549,7 +537,7 @@ nav {
   </div>
   <div class="brand-grid">
 
-    <a class="card" aria-label="Leffe – Sonic Identity, play video" data-preview="leffe-preview.mp4" href="https://vimeo.com/964407888/71f6aa6250" target="_blank">
+    <a class="card" aria-label="Leffe – Sonic Identity, play video, Transform Awards Gold 2025" data-preview="leffe-preview.mp4" href="https://vimeo.com/964407888/71f6aa6250" target="_blank">
       <div class="card-thumb">
         <img src="https://i.vimeocdn.com/video/1876982097-67444b69ebed86ce7ddc7e2b496fcd3174acce4329b042f41dbcc4fe8622063b-d_1920x1080?f=webp&region=us" loading="lazy" decoding="async" alt="">
         <div class="card-overlay">
@@ -560,7 +548,7 @@ nav {
       </div>
     </a>
 
-    <a class="card" aria-label="BSF – Sonic Identity, play video" data-preview="bsf-preview.mp4" href="https://vimeo.com/1041491529/56cc3ec8c0" target="_blank" data-vimeo="1041491529" data-vimeo-hash="56cc3ec8c0">
+    <a class="card" aria-label="BSF – Sonic Identity, play video, Transform Awards Bronze 2025" data-preview="bsf-preview.mp4" href="https://vimeo.com/1041491529/56cc3ec8c0" target="_blank" data-vimeo="1041491529" data-vimeo-hash="56cc3ec8c0">
       <div class="card-thumb">
         <img src="https://i.vimeocdn.com/video/1964279340-fa58877fc3cfe93a12e97354c539245359bae32b7745e73d89bf48ebdbba9ab6-d_1920x1080?f=webp&region=us" loading="lazy" decoding="async" alt="">
         <div class="card-overlay">
@@ -611,7 +599,7 @@ nav {
       </div>
     </a>
 
-    <a class="card" aria-label="Buried – Showtime, listen on SoundCloud (new tab)" rel="noopener" href="https://on.soundcloud.com/ef6b8QJ5z48K13k49" target="_blank">
+    <a class="card" aria-label="Buried – Showtime, Emmy-nominated series, listen on SoundCloud (new tab)" rel="noopener" href="https://on.soundcloud.com/ef6b8QJ5z48K13k49" target="_blank">
       <div class="card-thumb">
         <img src="buried-thumb-800.webp" srcset="buried-thumb-800.webp 800w, buried-thumb-1600.webp 1600w" sizes="(max-width: 768px) 100vw, 50vw" width="1600" height="900" loading="lazy" decoding="async" alt="">
         <div class="card-overlay">
@@ -653,6 +641,7 @@ nav {
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <span class="footer-copy">Assa Raviv | Music for Visuals</span>
