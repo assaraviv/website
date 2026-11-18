@@ -70,6 +70,7 @@
   --ink: #0f0d0b;
   --paper: #f4f1eb;
   --warm: #c8a96e;
+  --warm-text: #7a5a24;
   --muted: #7a7268;
   --line: rgba(15,13,11,0.11);
 }
@@ -90,7 +91,7 @@ nav {
 }
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
 .nav-links a {
-  font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+  font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--muted); text-decoration: none; transition: color 0.2s;
   white-space: nowrap;
 }
@@ -143,7 +144,8 @@ nav {
   transition: opacity 0.35s ease;
   text-align: center;
 }
-.card:hover .card-overlay {
+.card:hover .card-overlay,
+.card:focus-visible .card-overlay {
   opacity: 1;
 }
 .card-overlay .card-client,
@@ -154,7 +156,9 @@ nav {
 }
 .card-overlay .card-row { transition-delay: 0.06s; }
 .card:hover .card-overlay .card-client,
-.card:hover .card-overlay .card-row {
+.card:hover .card-overlay .card-row,
+.card:focus-visible .card-overlay .card-client,
+.card:focus-visible .card-overlay .card-row {
   transform: translateY(0);
   opacity: 1;
 }
@@ -186,18 +190,18 @@ nav {
   display: grid; grid-template-columns: 160px 1fr; gap: 4rem;
   border-top: 1px solid var(--line);
 }
-.about-label { font-size: 0.52rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); padding-top: 0.25rem; }
+.about-label { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); padding-top: 0.25rem; }
 .about-body p { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 300; line-height: 1.75; margin-bottom: 1.25rem; }
-.about-body p em { font-style: italic; color: var(--warm); }
+.about-body p em { font-style: italic; color: var(--warm-text); }
 .contact-row { margin-top: 2rem; display: flex; gap: 2rem; }
-.contact-link { font-size: 0.56rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+.contact-link { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
 .contact-link:hover { color: var(--ink); }
 
 footer {
   border-top: 1px solid var(--line); padding: 1.25rem 3rem;
   display: flex; justify-content: space-between; align-items: center;
 }
-.footer-copy { font-size: 0.52rem; letter-spacing: 0.09em; color: var(--muted); }
+.footer-copy { font-size: 0.7rem; letter-spacing: 0.09em; color: var(--muted); }
 
 /* MODAL */
 .modal-backdrop {
@@ -263,7 +267,7 @@ h2.about-label { font-weight: 300; }
   pointer-events: none;
 }
 .card-badge {
-  font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--warm); background: rgba(15,13,11,0.72);
   padding: 0.4rem 0.65rem;
 }
@@ -290,7 +294,7 @@ nav {
 @media (max-width: 768px) {
   nav { padding: 1rem 1.25rem; }
   .nav-links { gap: 1.25rem; }
-  .nav-links a { font-size: 0.52rem; }
+  .nav-links a { font-size: 0.7rem; }
   .section { padding: 2.5rem 1.25rem; }
   .section-header { margin-bottom: 1.25rem; }
   .brand-grid { grid-template-columns: repeat(2, 1fr); }
@@ -320,7 +324,7 @@ nav {
   nav { flex-direction: column; align-items: flex-start; gap: 0.3rem; padding: 0.9rem 1.25rem 0.5rem; }
   .nav-name { font-size: 0.85rem; letter-spacing: 0.12em; white-space: nowrap; }
   .nav-links { gap: 1.15rem; }
-  .nav-links a { display: inline-block; font-size: 0.6rem; padding: 0.4rem 0; }
+  .nav-links a { display: inline-block; font-size: 0.72rem; padding: 0.4rem 0; }
   .hide-sm { display: none; }
   section[id], #contact { scroll-margin-top: 5rem; }
 }

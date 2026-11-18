@@ -1,1 +1,9 @@
 .DS_Store
+*.gif
+PRODUCT.md
+DESIGN.md
+.impeccable/
+.claude/
+.agents/
+code/
+skills-lock.json
