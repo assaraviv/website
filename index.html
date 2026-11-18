@@ -52,10 +52,10 @@
   ],
   "knowsAbout": ["Film Scoring", "Advertising Music", "Sonic Branding", "Television Music", "Music Production"],
   "award": [
-    "Gold Transform Award, Best Audio Brand (Consumer), 2025",
+    "Gold, Transform Awards Europe 2025, Best Audio Brand (Consumer): The Sound of Leffe",
+    "D&AD Shortlist 2024, Sonic Branding: The Sound of Leffe",
     "Silver Clio Award, Tide \u201cLaundry Night\u201d",
-    "Bronze Clio Award, Resy \u201cRight This Way\u201d",
-    "News & Documentary Emmy nomination, Buried (Showtime), 2022"
+    "Bronze Clio Award, Resy \u201cRight This Way\u201d"
   ]
 }
 </script>
@@ -253,11 +253,15 @@ footer {
 h2.about-label { font-weight: 300; }
 
 /* AWARD / NOTE BADGE ON A CARD */
-.card-badge {
+.card-badges {
   position: absolute; top: 0.9rem; left: 0.9rem; z-index: 2;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem;
+  pointer-events: none;
+}
+.card-badge {
   font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--warm); background: rgba(15,13,11,0.72);
-  padding: 0.4rem 0.65rem; pointer-events: none;
+  padding: 0.4rem 0.65rem;
 }
 
 
@@ -288,7 +292,7 @@ nav {
   .brand-grid { grid-template-columns: repeat(2, 1fr); }
   .film-grid { grid-template-columns: 1fr; }
   .about-section { grid-template-columns: 1fr; gap: 1.25rem; padding: 3rem 1.25rem; }
-  .card-badge { top: 0.6rem; left: 0.6rem; }
+  .card-badges { top: 0.6rem; left: 0.6rem; }
   .about-body p { font-size: 1.1rem; }
   .contact-row { flex-wrap: wrap; gap: 1.25rem; }
   .modal-inner { width: 96vw; }
@@ -392,7 +396,7 @@ nav {
           <div class="card-client">Tide</div>
           <div class="card-row"><span class="card-type">Laundry Night</span></div>
         </div>
-        <span class="card-badge">Clio Awards · Silver</span>
+        <div class="card-badges"><span class="card-badge">Clio Awards · Silver</span></div>
       </div>
     </a>
 
@@ -403,7 +407,7 @@ nav {
           <div class="card-client">Resy</div>
           <div class="card-row"><span class="card-type">Right This Way</span></div>
         </div>
-        <span class="card-badge">Clio Awards · Bronze</span>
+        <div class="card-badges"><span class="card-badge">Clio Awards · Bronze</span></div>
       </div>
     </a>
 
@@ -544,7 +548,7 @@ nav {
           <div class="card-client">Leffe</div>
           <div class="card-row"><span class="card-type">Sonic Identity</span></div>
         </div>
-        <span class="card-badge">Transform Awards · Gold 2025</span>
+        <div class="card-badges"><span class="card-badge">Transform Awards · Gold 2025</span><span class="card-badge">D&amp;AD · Shortlist 2024</span></div>
       </div>
     </a>
 
@@ -595,7 +599,7 @@ nav {
           <div class="card-client">Buried</div>
           <div class="card-row"><span class="card-type">Showtime</span></div>
         </div>
-        <span class="card-badge">Emmy-nominated</span>
+        <div class="card-badges"><span class="card-badge">Emmy-nominated</span></div>
       </div>
     </a>
 
@@ -619,7 +623,7 @@ nav {
   <div class="about-body">
     <p>Assa Raviv is a Tel Aviv-based composer and music producer writing original music for <em>advertising, film and television</em>.</p>
 
-    <p>He has scored campaigns for <em>Apple, Google, Nike, BMW and Amazon</em>, as well as Super Bowl commercials, and his work has earned Silver and Bronze Clio Awards. His sonic identities, including <em>The Sound of Leffe</em>, have won Gold and Bronze at the Transform Awards.</p>
+    <p>He has scored campaigns for <em>Apple, Google, Nike, BMW and Amazon</em>, as well as Super Bowl commercials, and his work has earned Silver and Bronze Clio Awards. His sonic identities have won Gold and Bronze at the Transform Awards, and <em>The Sound of Leffe</em> was shortlisted at D&amp;AD.</p>
 
     <p>On television, his credits include <em>Losing Alice</em> (Apple TV+), <em>Cold Case: The Tylenol Murders</em> (Netflix) and the Emmy-nominated docuseries <em>Buried</em> (Showtime).</p>
 
@@ -757,7 +761,7 @@ function previewVideo(card) {
   video.src = card.dataset.preview;
   video.addEventListener('playing', () => card.classList.add('previewing'));
   const thumb = card.querySelector('.card-thumb');
-  thumb.insertBefore(video, thumb.querySelector('.card-overlay, .card-badge'));
+  thumb.insertBefore(video, thumb.querySelector('.card-overlay, .card-badges'));
   card._preview = video;
   return video;
 }
