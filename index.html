@@ -253,6 +253,10 @@ footer {
 
 h2.about-label { font-weight: 300; }
 
+/* Sonic Identity: three cards in one row */
+#sonic .brand-grid { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 600px) { #sonic .brand-grid { grid-template-columns: 1fr; } }
+
 /* AWARD / NOTE BADGE ON A CARD */
 .card-badges {
   position: absolute; top: 0.9rem; left: 0.9rem; z-index: 2;
@@ -550,6 +554,17 @@ nav {
           <div class="card-row"><span class="card-type">Sonic Identity</span></div>
         </div>
         <div class="card-badges"><span class="card-badge">Transform Awards · Gold 2025</span><span class="card-badge">D&amp;AD · Shortlist 2024</span></div>
+      </div>
+    </a>
+
+    <a class="card" aria-label="BSF – Sonic Identity, play video" href="https://vimeo.com/1041491529/56cc3ec8c0" target="_blank" data-vimeo="1041491529" data-vimeo-hash="56cc3ec8c0">
+      <div class="card-thumb">
+        <img src="https://i.vimeocdn.com/video/1964279340-fa58877fc3cfe93a12e97354c539245359bae32b7745e73d89bf48ebdbba9ab6-d_1920x1080?f=webp&region=us" loading="lazy" decoding="async" alt="">
+        <div class="card-overlay">
+          <div class="card-client">BSF</div>
+          <div class="card-row"><span class="card-type">Sonic Identity</span></div>
+        </div>
+        <div class="card-badges"><span class="card-badge">Transform Awards · Bronze 2025</span></div>
       </div>
     </a>
 
