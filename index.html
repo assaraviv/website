@@ -803,6 +803,15 @@ if (canHover && !reduceMotion) {
 }
 // ────────────────────────────────────────────────────────────────
 
+// Contact link: always scroll the contact row into view, clear of the nav,
+// even if the URL hash is already #contact (browsers don't all re-scroll then).
+const contactRow = document.getElementById('contact');
+document.querySelector('.nav-links a[href="#contact"]').addEventListener('click', e => {
+  e.preventDefault();
+  contactRow.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  history.replaceState(null, '', '#contact');
+});
+
 // Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
@@ -811,6 +820,8 @@ window.addEventListener('scroll', () => {
   sections.forEach(s => {
     if (window.scrollY >= s.offsetTop - 100) current = s.id;
   });
+  const atBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 2;
+  if (atBottom || window.scrollY >= contactRow.offsetTop - 100) current = 'contact';
   navLinks.forEach(a => {
     a.style.color = a.getAttribute('href') === '#' + current ? 'var(--ink)' : '';
   });
