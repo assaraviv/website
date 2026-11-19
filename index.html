@@ -64,6 +64,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&text=ARSVI&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -75,7 +76,7 @@
   --line: rgba(15,13,11,0.11);
 }
 html { scroll-behavior: smooth; }
-body { background: var(--paper); color: var(--ink); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 300; }
+body { background: var(--paper); color: var(--ink); font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; }
 
 nav {
   position: sticky; top: 0; z-index: 100;
@@ -173,13 +174,13 @@ nav {
   transition-delay: 0.06s;
 }
 .card-client {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
   font-size: clamp(1.4rem, 2.8vw, 2.4rem); font-weight: 700; color: var(--paper);
   letter-spacing: -0.02em; text-transform: none; font-style: normal;
   line-height: 1; margin-bottom: 0.4rem;
 }
 .card-row { display: flex; justify-content: center; align-items: center; gap: 0.75rem; }
-.card-type { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: none; color: rgba(244,241,235,0.8); font-weight: 300; }
+.card-type { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: none; color: rgba(244,241,235,0.8); font-weight: 400; }
 
 /* ABOUT */
 .about-section {
@@ -224,7 +225,7 @@ footer {
 .modal-close {
   position: absolute;
   top: -2.5rem; right: -0.75rem;
-  font-family: 'DM Mono', monospace;
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
   color: rgba(244,241,235,0.6);
   background: none; border: none; cursor: pointer;
@@ -253,7 +254,7 @@ footer {
   clip: rect(0 0 0 0); white-space: nowrap;
 }
 
-h2.about-label { font-weight: 300; }
+h2.about-label { font-weight: 400; }
 
 /* Sonic Identity: three cards in one row */
 #sonic .brand-grid { grid-template-columns: repeat(3, 1fr); }
