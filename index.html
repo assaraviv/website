@@ -102,6 +102,11 @@ nav {
   margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line);
 }
 .section-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; }
+/* Measure-line tick before section titles (delete this rule to remove) */
+.section-title::before {
+  content: ''; display: inline-block; width: 1px; height: 0.75em;
+  margin-right: 0.55em; background: var(--warm-text); opacity: 0.7;
+}
 
 /* BRAND GRID 3 cols */
 .brand-grid {
@@ -124,6 +129,7 @@ nav {
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .card:hover .card-thumb img { transform: scale(1.045); }
+.card:active .card-thumb img { transform: scale(0.98); transition-duration: 160ms; }
 /* Hover preview: a small MP4 loop, created by JS on first hover (mouse only) */
 .card-thumb .preview {
   position: absolute; inset: 0;
@@ -217,9 +223,10 @@ footer {
   font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
   color: rgba(244,241,235,0.6);
   background: none; border: none; cursor: pointer;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 120ms ease;
 }
 .modal-close:hover { color: var(--paper); }
+.modal-close:active { transform: scale(0.92); }
 .modal-title {
   position: absolute;
   top: -2.5rem; left: 0;
@@ -643,7 +650,7 @@ nav {
 </main>
 
 <footer>
-  <span class="footer-copy">Assa Raviv | Music for Visuals</span>
+  <span class="footer-copy">Assa Raviv ‖ Music for Visuals</span>
   <span class="footer-copy">© <span id="year">2026</span></span>
 </footer>
 
