@@ -95,8 +95,10 @@ nav {
   font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--muted); text-decoration: none; transition: color 0.2s;
   white-space: nowrap;
+  padding-bottom: 0.2rem; border-bottom: 1px solid transparent;
 }
 .nav-links a:hover { color: var(--ink); }
+.nav-links a.active { color: var(--ink); border-bottom-color: var(--warm-text); }
 
 .section { padding: 4rem 3rem; border-bottom: 1px solid var(--line); }
 .section-header {
@@ -823,7 +825,7 @@ window.addEventListener('scroll', () => {
   const atBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 2;
   if (atBottom || window.scrollY >= contactRow.offsetTop - 100) current = 'contact';
   navLinks.forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--ink)' : '';
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
   });
 }, { passive: true });
 
